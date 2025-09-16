@@ -24,6 +24,7 @@ from .api_routes.internal_api import router as internal_router
 from .api_routes.knowledge_api import router as knowledge_router
 from .api_routes.mcp_api import router as mcp_router
 from .api_routes.ollama_api import router as ollama_router
+from .api_routes.opencode_api import router as opencode_router
 from .api_routes.progress_api import router as progress_router
 from .api_routes.projects_api import router as projects_router
 
@@ -181,6 +182,7 @@ app.include_router(mcp_router)
 # app.include_router(mcp_client_router)  # Removed - not part of new architecture
 app.include_router(knowledge_router)
 app.include_router(ollama_router)
+app.include_router(opencode_router)
 app.include_router(projects_router)
 app.include_router(progress_router)
 app.include_router(agent_chat_router)
